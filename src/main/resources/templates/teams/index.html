@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Teams </title>
+</head>
+<body>
+  <div th:each="team, stat : ${teamsList}" th:object="${team}">
+<!--    <p th:text="${stat.index}"></p>-->
+    <a th:href=" '/team/' + ${stat.index} " >
+      <h2 th:text="*{teamName}"></h2>
+    </a>
+
+  </div>
+</body>
+</html>
